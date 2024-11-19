@@ -11,7 +11,6 @@ public class Salt {
         SecureRandom Random = new SecureRandom(); 
         byte[] salt = new byte[20]; 
         Random.nextBytes(salt);
-        System.out.println("The salt is " + Base64.getEncoder().encodeToString(salt));
         return Base64.getEncoder().encodeToString(salt);
     }
 

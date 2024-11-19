@@ -2,8 +2,6 @@ package com.example.NewAuthenticationApplication.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.NewAuthenticationApplication.repository.RSAKeyRepository;
-
 import javax.crypto.Cipher;
 
 import java.io.FileInputStream;
@@ -16,9 +14,7 @@ import java.util.Base64;
 @Service
 public class RSAService {
 
-    @SuppressWarnings("unused")
     @Autowired
-    private RSAKeyRepository rsaKeyRepository;
     
     public PublicKey returnkey() throws KeyException {
         try {

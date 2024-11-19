@@ -22,9 +22,7 @@ public class CustomPasswordEncoder implements PasswordEncoder {
     @Override
     public String encode(CharSequence rawPassword) {
         try {
-            System.out.println(rawPassword);
             String CheckedPassword = hashPassword(rawPassword.toString());
-            System.out.println(CheckedPassword);
             String encryptedPassword = Service.encrypt(CheckedPassword);
             String hashedPassword = hashPassword(encryptedPassword);
             return new BCryptPasswordEncoder(12).encode(hashedPassword);
